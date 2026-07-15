@@ -8,13 +8,13 @@ local prompt = npc:WaitForChild("ProximityPrompt")
 
 local responsesGui = player.PlayerGui:WaitForChild("Dialogue"):WaitForChild("DialogueResponses")
 
-local responseButton = responsesGui:WaitForChild("temp")
-local responseButton2 = responsesGui:WaitForChild("temp2")
+local responseButton = responsesGui:WaitForChild("imgButton")
+local responseButton2 = responsesGui:WaitForChild("imgButton2")
 
 local function typeText(textLabel, message)
     
     textLabel.Text = ""
-    local sound = ReplicatedStorage:WaitForChild("Type")
+    local sound = ReplicatedStorage:WaitForChild("TypeSound")
 
     for i = 1, #message do
         textLabel.Text = string.sub(message, 1, i)
